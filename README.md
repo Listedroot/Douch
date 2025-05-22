@@ -87,7 +87,7 @@ Douch provides a full-featured, standalone API for plugin and integration develo
 >>>>>>> a24eeeb40786490442727789f6ecca858d132485
 
 ## License
-Copyright (c) Sunpowder. All rights reserved.
+Copyright (c) Listedroot. All rights reserved.
 MIT license 
 free forever
 maintained forever
