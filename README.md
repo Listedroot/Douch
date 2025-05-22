@@ -1,6 +1,6 @@
 # Douch Proxy
 
-**Douch** is a next-generation, high-performance Minecraft proxy, fully compatible with all versions of Paper server and Minecraft. Designed and engineered by Sunpowder, Douch aims to surpass BungeeCord and Velocity in performance, compatibility, and extensibility.
+**Douch** is a next-generation, high-performance Minecraft proxy, fully compatible with all versions of Paper server and Minecraft. Designed and engineered by Listed, Douch aims to surpass BungeeCord and Velocity in performance, compatibility, and extensibility.
 
 ## Features
 - Full support for all Minecraft versions (legacy to latest) via one version of the proxy
