@@ -15,13 +15,18 @@ public class DouchBootstrap {
         System.out.println("\n========================================");
         System.out.println(" Douch Proxy v1.0.0");
         System.out.println(" High-performance Minecraft Proxy");
-        System.out.println(" Developed by MONDERASDOR");
         System.out.println("========================================");
         System.out.println("Starting proxy...");
 
-        NetworkManager networkManager = new NetworkManager();
+        // Create proxy instance first
+        DouchProxy douchProxy = new DouchProxy(true, 25565); // Default to online mode and port 25565
+        
+        // Initialize managers
+        NetworkManager networkManager = new NetworkManager(douchProxy, true, 25565);
         BackendServerRegistry backendRegistry = new BackendServerRegistry();
         PlayerManager playerManager = new PlayerManager();
+        
+        // Create proxy server with all dependencies
         ProxyServer proxy = new ProxyServer(networkManager, backendRegistry, playerManager);
         try {
             proxy.start();

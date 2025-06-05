@@ -6,7 +6,7 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class ProxyUpdateChecker {
-    private static final String UPDATE_URL = "https://api.github.com/repos/MONDERASDOR/Douch/releases/latest";
+    private static final String UPDATE_URL = "https://api.github.com/repos/Listedroot/Douch/releases/latest";
     public String checkForUpdate() throws IOException {
         URL url = new URL(UPDATE_URL);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();

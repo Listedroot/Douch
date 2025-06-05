@@ -1,5 +1,6 @@
 package com.sunpowder.douch.network;
 
+import com.sunpowder.douch.core.DouchProxy;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -47,6 +48,13 @@ public class MCChannelInitializer extends ChannelInitializer<Channel> {
     private final ChatFilter chatFilter = new ChatFilter();
     private final ChatCommandHandler chatCommandHandler = new ChatCommandHandler();
     private final AdminCommandHandler adminCommandHandler = new AdminCommandHandler();
+    private final DouchProxy proxy;
+    private final boolean onlineMode;
+
+    public MCChannelInitializer(DouchProxy proxy, boolean onlineMode) {
+        this.proxy = proxy;
+        this.onlineMode = onlineMode;
+    }
 
     @Override
     protected void initChannel(Channel ch) throws Exception {
@@ -58,7 +66,7 @@ public class MCChannelInitializer extends ChannelInitializer<Channel> {
         pipeline.addLast("decoder", new MCDecoder());
         pipeline.addLast("encoder", new MCEncoder());
         pipeline.addLast("handshake-decoder", new MCHandshakeDecoder());
-        pipeline.addLast("handshake-handler", new MCHandshakeHandler());
+        pipeline.addLast("handshake-handler", new MCHandshakeHandler(proxy, onlineMode));
         // Idle connection handler
         pipeline.addLast("idle-handler", new MCIdleHandler());
         // Firewall and rate limiting

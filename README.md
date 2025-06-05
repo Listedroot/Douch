@@ -1,6 +1,6 @@
 # Douch Proxy
 
-Douch Proxy is a high-performance, next-generation Minecraft proxy designed for full compatibility with all versions of Paper server and Minecraft. Built with a focus on performance, security, and extensibility, Douch Proxy aims to provide a robust alternative to BungeeCord and Velocity.
+Douch Proxy is a high-performance, next-generation Minecraft proxy solution offering full compatibility with all Minecraft and Paper server versions. Engineered for performance, security, and extensibility, Douch Proxy serves as a modern alternative to traditional proxies like BungeeCord and Velocity.
 
 ---
 
@@ -23,16 +23,42 @@ Douch Proxy is a high-performance, next-generation Minecraft proxy designed for 
 
 ---
 
-## Project Overview
-Douch Proxy is designed to be the modern, secure, and extensible core of your Minecraft network. Unlike legacy proxies, it is built from the ground up for performance, security, and ease of use. It supports all Minecraft versions with a single binary and provides a robust API for plugin development.
+## 🚀 Project Overview
 
-## Why Douch Proxy Was Created
-Douch Proxy was built to address the limitations and pain points of existing Minecraft proxies like BungeeCord and Velocity. The main motivations include:
-- **Unified Version Support:** Existing proxies often struggle with supporting all Minecraft versions seamlessly. Douch Proxy aims to provide true multi-version support in a single binary.
-- **Modern Security:** Many legacy proxies lack robust, modern security features. Douch Proxy integrates advanced firewall, rate limiting, and anti-exploit measures by default.
-- **Performance:** By leveraging Netty and a streamlined architecture, Douch Proxy is designed for high throughput and low latency, even under heavy load.
-- **Extensibility:** The plugin API is designed to be modern, clean, and easy to use, enabling rapid development of custom features and integrations.
-- **Operational Simplicity:** Douch Proxy uses a single configuration file and manages multiple backend servers in one process, reducing operational complexity.
+Douch Proxy is the modern, secure, and extensible foundation for your Minecraft network infrastructure. Built from the ground up with performance and security as top priorities, it delivers a seamless experience across all Minecraft versions through a single binary. The proxy's robust plugin API enables extensive customization and extension of its core functionality.
+
+## 💡 Why Choose Douch Proxy?
+
+Douch Proxy was created to overcome the limitations of existing Minecraft proxy solutions. Here's what sets it apart:
+
+### 🔄 Unified Version Support
+- Single binary supporting all Minecraft versions from legacy to latest
+- Seamless protocol translation and compatibility
+- No version-specific configurations needed
+
+### 🔒 Enterprise-Grade Security
+- Built-in protection against common exploits and attacks
+- Advanced firewall with IP whitelisting/blacklisting
+- Rate limiting and DoS protection
+- Secure authentication and encryption
+
+### ⚡ Performance Optimized
+- Netty-based networking for maximum throughput
+- Low-latency architecture
+- Efficient resource utilization
+- Handles thousands of concurrent connections
+
+### 🧩 Extensible Architecture
+- Modern, clean plugin API
+- Comprehensive event system
+- Easy integration with existing infrastructure
+- Simplified plugin development
+
+### 🛠️ Simplified Operations
+- Single configuration file
+- Built-in metrics and monitoring
+- Dynamic backend management
+- Minimal resource footprint
 
 ## Why Use Douch Proxy?
 - **All-in-One Solution:** Manage multiple backend servers, advanced chat, firewall, and metrics from a single proxy.
@@ -54,30 +80,72 @@ Douch Proxy was built to address the limitations and pain points of existing Min
 - **Netty-Based Pipeline:** Uses Netty for all networking, with a modular pipeline for protocol handling, security, chat, and metrics.
 - **Dynamic Protocol Handling:** Custom decoders/encoders and handshake logic allow seamless support for all Minecraft versions.
 - **Configuration-Driven:** All core settings are managed via a single `config.properties` file.
-- **Plugin API:** Extensible via a modern plugin API (see [DouchAPI](https://github.com/MONDERASDOR/DouchAPI)).
+- **Plugin API:** Extensible via a modern plugin API (see [DouchAPI](https://github.com/Listedroot/DouchAPI)).
 
-## Features
-- Supports all Minecraft versions (legacy to latest) with a single proxy version
-- High-speed Netty-based networking
-- Advanced protocol translation and compatibility
-- Plugin API for extensibility ([DouchAPI on GitHub](https://github.com/MONDERASDOR/DouchAPI))
-- Comprehensive security and anti-exploit measures
-- Monitoring, logging, and metrics
-- Advanced chat management (filtering, commands, admin tools)
-- Integrated firewall and backend server management
+## ✨ Key Features
 
-## Requirements
-- Java 17 or higher
-- Maven 3.6+
+### Core Functionality
+- **Universal Version Support**: Single binary for all Minecraft versions
+- **High-Performance Networking**: Built on Netty for maximum efficiency
+- **Unified Configuration**: Centralized settings management
+- **Plugin System**: Extensible through custom plugins
 
-## Running Douch Proxy
-Douch Proxy is designed to be simple to run, but its architecture differs from traditional Minecraft proxies like BungeeCord or Velocity:
+### Advanced Capabilities
+- **Dynamic Protocol Handling**: Automatic version detection
+- **Load Balancing**: Intelligent player distribution
+- **Health Monitoring**: Automatic failover and recovery
+- **Comprehensive Metrics**: Built-in monitoring and analytics
+- **Chat Management**: Advanced filtering and commands
+- **Security Suite**: Firewall, rate limiting, and exploit protection
 
-- **Single Process, Multi-Backend:** Douch Proxy runs as a single process and manages multiple backend Paper servers internally. You do not need to run separate processes for each backend or use additional plugins for basic proxying.
-- **Configuration-Driven:** All core settings, including backend servers, ports, and firewall options, are managed through the `config.properties` file. There is no need for additional YAML or JSON configuration files or plugin folders.
-- **No Plugin Hot-Reload:** Unlike BungeeCord, Douch Proxy does not support hot-reloading plugins or configuration changes at runtime. Changes to the configuration require a restart of the proxy.
-- **Modern Networking:** Douch Proxy uses a modern Netty-based networking engine and advanced protocol translation, allowing it to support all Minecraft versions with a single binary.
-- **No Legacy Plugin API:** Douch Proxy does not use the BungeeCord or Velocity plugin APIs. Instead, it provides its own API ([DouchAPI](https://github.com/MONDERASDOR/DouchAPI)) for plugin development.
+## 🛠️ System Requirements
+
+### Prerequisites
+- Java 17 or higher (recommended: Java 17 LTS)
+- Maven 3.6+ (for building from source)
+- At least 1GB RAM (2GB+ recommended for production)
+- Linux/Windows/macOS (Linux recommended for production)
+
+## 🚀 Getting Started
+
+### Quick Start
+1. Download the latest release from our [GitHub releases](https://github.com/Listedroot/Douch/releases)
+2. Create a `config.properties` file (or let it generate on first run)
+3. Start the proxy:
+   ```bash
+   java -jar douch-proxy-1.0.0-shaded.jar
+   ```
+4. Connect your Minecraft client to the proxy's IP and port
+
+### Key Differences from Other Proxies
+
+| Feature | Douch Proxy | BungeeCord | Velocity |
+|---------|-------------|------------|----------|
+| Architecture | Single process, multi-backend | Multi-process | Multi-process |
+| Configuration | Single properties file | Multiple YAML files | Multiple files |
+| Hot Reload | No | Yes | Partial |
+| Protocol Support | All versions | Version-dependent | Version-dependent |
+| Resource Usage | Low | Medium | Medium |
+| Plugin API | Modern, async | Legacy | Modern |
+
+### Configuration Basics
+
+Edit the `config.properties` file to customize:
+
+```properties
+# Network settings
+proxy.port=25565
+proxy.host=0.0.0.0
+proxy.online-mode=true
+
+# Backend servers (comma-separated)
+backend.servers=127.0.0.1:25566
+
+# Security settings
+firewall.enabled=true
+max.connections=10
+rate-limit=1000
+```
 
 ### How to Run
 1. Build the proxy as described above.
@@ -138,7 +206,7 @@ Douch Proxy provides a standalone API for plugin and integration development. Th
   </repository>
 </repositories>
 <dependency>
-  <groupId>com.github.MONDERASDOR</groupId>
+  <groupId>com.github.Listedroot</groupId>
   <artifactId>DouchAPI</artifactId>
   <version>v1.0.0</version>
 </dependency>
@@ -148,67 +216,94 @@ Douch Proxy provides a standalone API for plugin and integration development. Th
 - **Event System:** Listen for player join/quit, server switch, command registration, proxy ping, and chat events. All events implement `getTimestamp()` and `getName()`. Use `EventPriority` and `EventBusImpl` for advanced event handling.
 - **Command Registration:** Register custom commands via the API.
 - **Context Access:** Access proxy internals (config, logger, scheduler, etc.) via `PluginContext`.
-- **Example Plugins:** See [DouchAPI README](https://github.com/MONDERASDOR/DouchAPI#readme) for usage and examples.
+- **Example Plugins:** See [DouchAPI README](https://github.com/Listedroot/DouchAPI#readme) for usage and examples.
 
-## FAQ
-**Q: Does Douch Proxy support all Minecraft versions?**
-A: Yes, it is designed to support all versions with a single binary.
+## ❓ Frequently Asked Questions
 
-**Q: Can I use BungeeCord or Velocity plugins?**
-A: No, Douch Proxy uses its own modern API for plugins. Only Paper plugins that you setup in the Paper backend server are supported.
+### General
 
-**Q: How do I add backend servers?**
-A: Edit `config.properties` or use the backend management commands (if enabled).
+<details>
+<summary>Does Douch Proxy support all Minecraft versions?</summary>
+Yes! Douch Proxy is designed to support all Minecraft versions with a single binary, from the earliest to the latest releases. It handles protocol translation automatically.
+</details>
 
-**Q: Is hot-reload supported?**
-A: No, changes require a restart for safety and stability.
+<details>
+<summary>Can I use BungeeCord or Velocity plugins?</summary>
+No, Douch Proxy uses its own modern API for plugins. However, you can use Paper plugins on your backend servers. For proxy-side functionality, you'll need to use plugins specifically designed for Douch Proxy.
+</details>
 
-**Q: How do I monitor proxy health?**
-A: Use the built-in metrics system or export metrics for external monitoring.
+### Setup & Configuration
 
-**Q: Why does Douch Proxy have more handlers and add features that already exist in the Paper server?**
-A: Douch Proxy implements its own handlers for chat, firewall, compression, encryption, login, status, and more to provide advanced security, compatibility, and control at the proxy level. This allows Douch Proxy to:
-- Filter, block, or modify traffic before it reaches backend servers, protecting against exploits and attacks.
-- Support all Minecraft versions and protocols, even if backend servers do not.
-- Provide unified chat filtering, command handling, and admin tools across all servers.
-- Enforce global rate limits, firewalls, and connection policies that Paper cannot enforce alone.
-- Collect metrics and monitor traffic at the network edge, not just inside the backend server.
-- Provide a modern event system for plugins, including event priorities and new events like ProxyPingEvent and CommandRegisterEvent.
-These features are necessary because a proxy must handle and secure traffic before it reaches the backend, and because not all backend servers may have the same plugins or configuration.
+<details>
+<summary>How do I add backend servers?</summary>
+Edit the `config.properties` file and update the `backend.servers` property with comma-separated addresses (e.g., `backend.servers=hub.example.com:25565,minigames.example.com:25566`). Restart the proxy to apply changes.
+</details>
 
-**Q: Can I use Douch Proxy with non-Paper backend servers?**
-A: Douch Proxy is optimized for Paper, but may work with other Minecraft server types that use compatible protocols. Full feature support is only guaranteed with Paper.
+<details>
+<summary>How do I run the proxy in offline mode?</summary>
+Start the proxy with the `--offline` flag or set `online-mode=false` in the configuration file. This disables authentication with Mojang's servers.
+</details>
 
-**Q: Does Douch Proxy support plugin hot-reloading?**
-A: No, for stability and security, plugins and configuration changes require a proxy restart.
+### Security
 
-**Q: How do I update Douch Proxy?**
-A: Download the latest release, replace the JAR, and restart the proxy. Always back up your configuration first.
+<details>
+<summary>What encryption does the proxy use?</summary>
+Douch Proxy uses:
+- **AES-128/256** for encrypted packet communication
+- **RSA 2048-bit** for secure key exchange in online mode
+- **SSL/TLS** for secure backend connections (when configured)
+</details>
 
-**Q: Where can I find example plugins?**
-A: See the [DouchAPI README](https://github.com/MONDERASDOR/DouchAPI#readme) for example plugins and usage guides.
+<details>
+<summary>How does rate limiting work?</summary>
+The proxy enforces configurable rate limits to prevent abuse:
+- Connection rate limiting (max connections per IP)
+- Packet rate limiting (packets per second)
+- Chat message throttling
 
-**Q: How do I report bugs or request features?**
-A: Open an issue on the [GitHub Issues page](https://github.com/MONDERASDOR/DouchProxy/issues).
+Adjust these in the `config.properties` file.
+</details>
 
-## Support & Community
-- **GitHub Issues:** [Douch Proxy Issues](https://github.com/MONDERASDOR/DouchProxy/issues)
-- **Discord:** (Add your Discord link here)
-- **Documentation:** [DouchAPI README](https://github.com/MONDERASDOR/DouchAPI#readme)
+### Troubleshooting
 
-## Configuration
-When you first run the proxy, a `config.properties` file will be created in the working directory if it does not exist. You can edit this file to configure the proxy. The available options are:
+<details>
+<summary>How do I view debug logs?</summary>
+Enable debug mode using one of these methods:
+1. Start with `--debug` flag
+2. Set `debug=true` in config
+3. Configure your logging framework (e.g., log4j2.xml) with DEBUG level
+</details>
 
-- `proxy.port`: The port the proxy listens on (default: 25565)
-- `proxy.host`: The IP address to bind (default: 0.0.0.0 for all interfaces)
-- `firewall.enabled`: Enable or disable the firewall (`true` or `false`)
-- `max.connections`: Maximum simultaneous connections per IP (default: 10)
-- `backend.servers`: Comma-separated list of backend Paper server addresses (e.g., `127.0.0.1:25566,127.0.0.1:25567`)
+<details>
+<summary>Why are players getting disconnected?</summary>
+Common reasons include:
+- Firewall blocking connections
+- Rate limiting being triggered
+- Backend server timeouts
+- Version mismatches
 
-Example `config.properties`:
-```
-# Douch Proxy Configuration
-proxy.port=25565
+Check the proxy logs for specific error messages.
+</details>
+
+## 🤝 Support & Community
+
+### Getting Help
+- **Documentation**: [DouchAPI Documentation](https://github.com/Listedroot/DouchAPI#readme)
+- **Issue Tracker**: [GitHub Issues](https://github.com/Listedroot/DouchProxy/issues)
+- **Community Chat**: [Join our Discord](https://discord.gg/your-invite-link)
+
+### Reporting Issues
+When reporting issues, please include:
+1. Proxy version and Java version
+2. Relevant configuration
+3. Steps to reproduce
+4. Error logs (if applicable)
+
+## 🛠️ Configuration Reference
+
+### Network Settings
+```properties
+# Bind address (0.0.0.0 for all interfaces)
 proxy.host=0.0.0.0
 firewall.enabled=true
 max.connections=10
@@ -220,7 +315,7 @@ We welcome contributions! To contribute:
 - Fork the repository and create a feature branch.
 - Follow the code style and document your changes.
 - Submit a pull request with a clear description.
-- For plugin contributions, see the [DouchAPI](https://github.com/MONDERASDOR/DouchAPI).
+- For plugin contributions, see the [DouchAPI](https://github.com/Listedroot/DouchAPI).
 
 ## License
 Copyright (c) Listedroot. All rights reserved.
