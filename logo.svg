@@ -1,0 +1,51 @@
+<!--
+  Douch Proxy Logo (SVG)
+  Unique, high-quality, advanced logo design for a modern Minecraft proxy.
+  Theme: Futuristic, shield/protection, network, and a subtle Minecraft reference.
+-->
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="80%" fx="50%" fy="40%">
+      <stop offset="0%" stop-color="#3cf5ff"/>
+      <stop offset="100%" stop-color="#005b7f"/>
+    </radialGradient>
+    <linearGradient id="shieldGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00e6a8"/>
+      <stop offset="100%" stop-color="#004d40"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#222" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Background Glow -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient)"/>
+
+  <!-- Shield Base -->
+  <path filter="url(#shadow)" d="M256 80 Q320 100 400 160 Q400 320 256 440 Q112 320 112 160 Q192 100 256 80 Z" fill="url(#shieldGradient)" stroke="#00e6a8" stroke-width="8"/>
+
+  <!-- Circuit/Network Motif -->
+  <g stroke="#3cf5ff" stroke-width="4" stroke-linecap="round">
+    <path d="M256 180 V320"/>
+    <path d="M200 240 Q256 210 312 240"/>
+    <path d="M200 320 Q256 350 312 320"/>
+    <circle cx="256" cy="180" r="12" fill="#00e6a8"/>
+    <circle cx="200" cy="240" r="10" fill="#00e6a8"/>
+    <circle cx="312" cy="240" r="10" fill="#00e6a8"/>
+    <circle cx="200" cy="320" r="10" fill="#00e6a8"/>
+    <circle cx="312" cy="320" r="10" fill="#00e6a8"/>
+  </g>
+
+  <!-- D Letter (Stylized, Futuristic) -->
+  <g filter="url(#shadow)">
+    <path d="M170 180 Q170 256 170 332 Q256 380 342 332 Q342 256 342 180 Q256 132 170 180 Z" fill="#fff" fill-opacity="0.08"/>
+    <path d="M190 200 Q190 256 190 312 Q256 350 322 312 Q322 256 322 200 Q256 162 190 200 Z" fill="#00e6a8" fill-opacity="0.15"/>
+    <path d="M210 220 Q210 256 210 292 Q256 320 302 292 Q302 256 302 220 Q256 192 210 220 Z" fill="#3cf5ff" fill-opacity="0.13"/>
+  </g>
+
+  <!-- Subtle Minecraft Block (Pixel Motif) -->
+  <rect x="380" y="80" width="36" height="36" rx="8" fill="#00e6a8" fill-opacity="0.7"/>
+  <rect x="390" y="90" width="16" height="16" rx="4" fill="#fff" fill-opacity="0.2"/>
+
+  <!-- Border -->
+  <path d="M256 80 Q320 100 400 160 Q400 320 256 440 Q112 320 112 160 Q192 100 256 80 Z" fill="none" stroke="#fff" stroke-width="3"/>
+</svg>
