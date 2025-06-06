@@ -289,8 +289,6 @@ Check the proxy logs for specific error messages.
 
 ### Getting Help
 - **Documentation**: [DouchAPI Documentation](https://github.com/Listedroot/DouchAPI#readme)
-- **Issue Tracker**: [GitHub Issues](https://github.com/Listedroot/DouchProxy/issues)
-- **Community Chat**: [Join our Discord](https://discord.gg/your-invite-link)
 
 ### Reporting Issues
 When reporting issues, please include:
