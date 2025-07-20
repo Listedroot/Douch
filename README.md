@@ -3,7 +3,10 @@
 Douch Proxy is a high-performance, next-generation Minecraft proxy solution offering full compatibility with all Minecraft and Paper server versions. Engineered for performance, security, and extensibility, Douch Proxy serves as a modern alternative to traditional proxies like BungeeCord and Velocity.
 
 ---
+consider supporting the project to help maintain it !
 
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/YourUsername/donate)
+---
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Architecture](#architecture)
