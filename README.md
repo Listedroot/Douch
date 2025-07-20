@@ -6,6 +6,7 @@ Douch Proxy is a high-performance, next-generation Minecraft proxy solution offe
 consider supporting the project to help maintain it !
 
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/Listedroot/donate)
+Feel Free To Donate. After all donations are absolutely Not Mandatory!
 ---
 ## Table of Contents
 - [Project Overview](#project-overview)
